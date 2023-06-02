@@ -1,6 +1,6 @@
 import Slide from './slide.js';
 
-export default (() => {
+const Slider = (() => {
 
     const pictures = [
         Slide('https://wallpapercave.com/wp/1ZLpfHy.jpg', 'Sunset over the ocean'),
@@ -45,3 +45,5 @@ export default (() => {
 
     return {showNextSlide, showPreviousSlide, showChosenSlide}
 })();
+
+export default Slider;

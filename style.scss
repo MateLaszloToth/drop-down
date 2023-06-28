@@ -19,6 +19,7 @@ body {
   height: 100vh;
   width: 100%;
   margin: 0;
+
   ul, li {
     padding: 0;
     margin: 0;
@@ -47,7 +48,7 @@ body {
 
           h3 {
             text-align: center;
-            margin:0;
+            margin: 0;
             padding: 15px;
           }
 
@@ -99,9 +100,18 @@ body {
           align-items: center;
 
           & > ul.slider-frame {
+            position: relative;
+            min-height: 300px;
+            width: 1000px;
 
             li {
-              display: none;
+              position: absolute;
+              top: 0;
+              left: 0;
+              opacity: 0;
+              height: 300px;
+              width: 1000px;
+              transition: opacity 2s ease-in-out;
 
               img {
                 height: 300px;
@@ -111,7 +121,8 @@ body {
               }
 
               &.visible {
-                display: block;
+                opacity: 1;
+                transition: opacity 2s ease-in-out;
               }
             }
 
